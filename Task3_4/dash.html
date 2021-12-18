@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Charts</title>
+    <link rel="stylesheet" href="./css/dash.css">
+</head>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
+<body>
+    <div class="metrics">
+        <h3>Company Metrics</h3>
+        <div class="cards">
+            <font color="#48be9b">$406,411.29</font><br><br>
+            <font size="2px">Total Revenue</font> 
+        </div>
+        <div class="cards">
+            $620 <br><br>
+            <font size="2px">Total Jobs Avg</font> 
+        </div>
+        <div class="cards">
+            655 <br><br>
+            <font size="2px">Tickets Created</font> 
+        </div>
+        <div class="cards">
+            735 <br><br>
+            <font size="2px">Tickets Scheduled</font> 
+        </div>
+        <div class="cards">
+            <font color="red">$110,448.8</font><br><br>
+            <font size="2px">Outstanding Amount</font> 
+        </div>
+        <div class="cards">
+            105 <br><br>
+            <font size="2px">Memberships Sold</font> 
+        </div>
+        <div class="cards">
+            436 <br><br>
+            <font size="2px">Jobs Completed</font> 
+        </div>
+        <div class="cards">
+            65 <br><br>
+            <font size="2px">Total Cancelled</font> 
+        </div>
+    </div>
+    <div class="graph">
+        <div class="graph1">
+            <h3>By Job Location</h3>
+              <canvas
+                id="myChart"
+                class="chart1"
+                style="width: 100%; background-color: #fff"></canvas>
+        </div>
+        <div class="graph1">
+            <h3>By Job Type</h3>
+            <canvas
+                id="myChart2"
+                class="chart1"
+                style="width: 100%; background-color: #fff"></canvas>
+            </div>
+        </div>
+    </div>
+      <script>
+        var xValues = [
+          "Everett",
+          "Seattle",
+          "Lynwood",
+          "Bothell",
+          "Mukilteo",
+          "Edmonds",
+        ];
+        var yValues = [78000, 75000, 49000, 42000, 41000, 34000];
+        var barColors = [
+          "#48be9b",
+          "#48be9b",
+          "#48be9b",
+          "#48be9b",
+          "#48be9b",
+          "#48be9b",
+        ];
+
+        new Chart("myChart", {
+          type: "horizontalBar",
+          data: {
+            labels: xValues,
+            datasets: [
+              {
+                backgroundColor: barColors,
+                data: yValues,
+              },
+            ],
+          },
+          options: {
+            legend: { display: false },
+            title: {
+              display: true,
+              text: "Revenue for November 2019",
+            },
+            scales: {
+              xAxes: [{ ticks: { min: 5000, max: 90000 } }],
+            },
+          },
+        });
+      </script>
+      <script>
+        var xValues = [
+          "Service Plumbing",
+          "Bid Work HVAC",
+          "Service HVAC",
+          "Bid Work Plumbing",
+          "HWT Replacement",
+          "Maintenance",
+          "Material Sale",
+        ];
+        var yValues = [182000, 130000, 80000, 78000, 44000, 42000, 22000];
+        var barColors = [
+            "#48be9b",
+            "#48be9b",
+            "#48be9b",
+            "#48be9b",
+            "#48be9b",
+            "#48be9b",
+        ];
+
+        new Chart("myChart2", {
+          type: "horizontalBar",
+          data: {
+            labels: xValues,
+            datasets: [
+              {
+                backgroundColor: barColors,
+                data: yValues,
+              },
+            ],
+          },
+          options: {
+            legend: { display: false },
+            title: {
+              display: true,
+              text: "Revenue for November 2019",
+            },
+            scales: {
+              xAxes: [{ ticks: { min: 20000, max: 200000 } }],
+            },
+          },
+        });
+      </script>
+</body>
+</html>

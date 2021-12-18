@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>SmartServ Login</title>
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+
+  <body>
+    <div class="body-content">
+      <div class="container">
+        <div class="logo">
+          <img src="./logo.png" alt="Company Logo" srcset="" />
+        </div>
+
+        <div class="login-form">
+          <form name="login" action="">
+            <div class="form-item">
+              <!-- <label for="userName">Username:</label> -->
+              <input
+                type="text"
+                class="box"
+                id="uName"
+                name="uname"
+                placeholder="Username"
+              />
+            </div>
+            <div class="form-item">
+              <!-- <label for="passWord">Password:</label> -->
+              <input
+                type="password"
+                class="box"
+                id="uPass"
+                name="pass"
+                placeholder="Password"
+              />
+            </div>
+            <div class="form-btns">
+              <input
+                type="button"
+                id="login"
+                value="Login"
+                onclick="validate()"
+              />
+              <div class="options">
+                <a href="#" onclick="mail()">Forget your Password?</a>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
+<script src="./js/script.js"></script>

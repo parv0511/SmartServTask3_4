@@ -1,0 +1,31 @@
+body {
+  background-color: #e1e7e7;
+}
+h3 {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  padding-left: 10px;
+}
+.metrics {
+  width: 100%;
+  margin: 10px 0px 0px 15px;
+}
+.cards {
+  float: left;
+  width: 20%;
+  border-left: 10px solid #48be9b;
+  margin: 10px;
+  padding: 10px 0px 10px 15px;
+  background-color: white;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-weight: 600;
+  box-shadow: 3px 3px #999999;
+}
+.graph {
+  width: 100%;
+  margin: 10px 0px 0px 15px;
+}
+.graph1 {
+  float: left;
+  width: 45%;
+  margin-left: 15px;
+}
